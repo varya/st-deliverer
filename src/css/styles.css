@@ -5,6 +5,13 @@
 
 body {
     font: 0/0 a;
+    color: #fff;
+    font: 16px/1.5 Arial;
+}
+
+a
+{
+    color: #f55;
 }
 
 .promo-text {
@@ -14,8 +21,6 @@ body {
     background:rgba(63,51,127, 0.85);
     border: rgba(255,248,191, 0.75) 5px solid;
     padding: 1em;
-    color: #fff;
-    font: 16px/1 Arial;
 }
 
 .promo-text__title
@@ -28,4 +33,10 @@ body {
 {
     text-align: right;
     margin-bottom: 0.15em;
+}
+
+.promo-text__text
+{
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
