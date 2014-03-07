@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'BeyondSky';
+    src: url("../font/beyond-sky.ttf");
+}
+
 body {
     font: 0/0 a;
 }
@@ -17,10 +22,10 @@ body {
 {
     font: 90px/1 BeyondSky;
     margin: 0;
-    margin-bottom: 0.15em;
 }
 
-@font-face {
-    font-family: 'BeyondSky';
-    src: url("../font/beyond-sky.ttf");
+.promo-text__share
+{
+    text-align: right;
+    margin-bottom: 0.15em;
 }
