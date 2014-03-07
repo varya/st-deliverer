@@ -2,7 +2,8 @@
     "paths" : {
         "./": "/",
         "src/img/": "http://varya.github.io/storage/pet-projects/st-deliverer/img/",
-        "src/css/": "http://varya.github.io/storage/pet-projects/st-deliverer/css/"
+        "src/css/": "http://varya.github.io/storage/pet-projects/st-deliverer/css/",
+        "src/font/": "http://varya.github.io/storage/pet-projects/st-deliverer/font/"
 
     }
 }
