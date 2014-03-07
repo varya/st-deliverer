@@ -15,9 +15,35 @@ charset="utf-8"></script>
 <div class="promo-text__share yashare-auto-init" data-yashareL10n="ru"
      data-yashareQuickServices="vkontakte,facebook,twitter,gplus" data-yashareTheme="counter"
 ></div>
-Description
-<br/>
-<br/>
+<div class="promo-text__text">
+<p>
+Need to host your static assets separately from HTML?
+</p>
+<p>
+Develop locally as usual, then use
+<a href="http://bem.info/tools/optimizers/borschik/">borschik</a>
+to transform relative links to CSS and JavaScript files as well as images and fonts into
+absolute URLs.
+</p>
+<p>
+Look into this page's source code. Stylesheets are linked with an absolute path.
+And so are URLs to images and fonts.<br/>
+Although they are relatively linked in the development version. Check it yourself:
+<ul>
+    <li><a href="https://github.com/varya/st-deliverer/blob/master/src/html/index.html">index.html</a></li>
+    <li><a href="https://github.com/varya/st-deliverer/blob/master/src/css/styles.css">styles.css</a></li>
+</ul>
+</p>
+<p>
+Borschik tool provides such a transformation following the
+<a href="https://github.com/varya/st-deliverer/blob/master/.borschik">.borschik</a>
+config file.
+</p>
+<p>
+Also want to try? Read an article about
+<a href="http://bem.info/articles/borschik/">Borschik, simple but powerful builder for text-based file formats</a>.
+</p>
+</div>
 <img src="http://varya.github.io/storage/pet-projects/st-deliverer/img/cat.gif"/>
 
 
