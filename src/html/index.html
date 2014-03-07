@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Telegraaf Collectief</title>
+        <link rel="stylesheet" href="../css/test.css"/>
+        <style>
+            body {
+                font: 0/0 a;
+            }
+            .form {
+                font: 12px/1 Tahoma;
+                width: 300px;
+                display: block;
+                border: navy 4px solid;
+                margin: 2em auto;
+                padding: 1em;
+            }
+            .form__title {
+                font-size: 1.2em;
+            }
+
+            .gender,
+            .name,
+            .email,
+            .legend {
+                font-size: 0.8em;
+                margin-bottom: 1em;
+            }
+
+            .name .input__control,
+            .email .input__control {
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+            .name__first {
+                width: 29%;
+                display: inline-block;
+            }
+
+            .name__middle {
+                width: 20%;
+                display: inline-block;
+            }
+
+            .name__last {
+                width: 49%;
+                display: inline-block;
+            }
+
+            .button {
+                background-color: lightgreen;
+                color: white;
+                font-weight: bold;
+                border: 0;
+                padding: 0.5em 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="form" action="" method="post">
+
+            <h2 class="form__title">Waar zou u dit jaar graag op willen besparen?</h2>
+
+            <div class="checkbox">
+                <input class="checkbox__control" type="checkbox" id="energy" name="energy" value="yes"/>
+                <label class="checkbox__label" for="energy">Enegrikosten</label>
+            </div>
+
+            <div class="checkbox">
+                <input class="checkbox__control" type="checkbox" id="auto" name="auto" value="yes"/>
+                <label class="checkbox__label" for="auto">Autoverzekering</label>
+            </div>
+
+            <div class="checkbox">
+                <input class="checkbox__control" type="checkbox" id="devices" name="devices" value="yes"/>
+                <label class="checkbox__label" for="devices">Elektronica & witgoed</label>
+            </div>
+
+            <div class="checkbox">
+                <input class="checkbox__control" type="checkbox" id="abonement" name="abonement" value="yes"/>
+                <label class="checkbox__label" for="abonement">Abonnementen (tv, mobiel, enz)</label>
+            </div>
+
+            <div class="checkbox">
+                <input class="checkbox__control" type="checkbox" id="groceries" name="groceries" value="yes"/>
+                <label class="checkbox__label" for="groceries">Dagelijkse boodschappen</label>
+            </div>
+
+            <div class="checkbox">
+                <input class="checkbox__control" type="checkbox" id="travel" name="travel" value="yes"/>
+                <label class="checkbox__label" for="travel">Vakantie & reizen</label>
+            </div>
+
+            <hr/>
+
+            <div class="radio gender">
+                <input class="radio__control" type="radio" id="dhr" name="gender" value="dhr"/>
+                <label class="radio__label" for="dhr">Dhr.</label>
+                <input class="radio__control" type="radio" id="mevr" name="gender" value="mevr"/>
+                <label class="radio__label" for="mevr">Mevr.</label>
+                *
+            </div>
+
+            <div class="name">
+                <div class="name__first">
+                    <label class="input__label" for="firstname">Voorletters *</label>
+                    <input class="input__control" id="firstname" name="firstname" type="text"/>
+                </div>
+                <div class="name__middle">
+                    <label class="input__label" for="middlename">Tussenv.</label>
+                    <input class="input__control" id="middlename" name="middlename" type="text"/>
+                </div>
+                <div class="name__last">
+                    <label class="input__label" for="lastname">Achternaam *</label>
+                    <input class="input__control" id="lastname" name="lastname" type="text"/>
+                </div>
+            </div>
+
+            <div class="email">
+                <label class="input__label" for="email">E-mailadres *</label>
+                <input class="input__control" id="email" name="email" type="text"/>
+            </div>
+
+            <p class="legend">* - vereist vield</p>
+
+            <input class="button" type="submit" name="send" value="Ik ben geinteresseerd!"/>
+
+        </form>
+    </body>
+</html>

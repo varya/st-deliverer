@@ -1,0 +1,17 @@
+{
+    "name": "telegraafcollectief",
+    "description": "",
+    "version": "0.0.1",
+    "homepage": "https://github.com/hyves-org/telegraafcollectief",
+    "author": "TMG",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:hyves-org/telegraafcollectief.git"
+    },
+    "dependencies": {
+        "borschik": "0.4.2"
+    },
+    "engines": [
+        "node >= 0.6.0"
+    ]
+}
