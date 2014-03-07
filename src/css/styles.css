@@ -1,5 +1,26 @@
-body
+body {
+    font: 0/0 a;
+}
+
+.promo-text {
+    margin: 2em auto;
+    width: 500px;
+    min-height: 200px;
+    background:rgba(63,51,127, 0.85);
+    border: rgba(255,248,191, 0.75) 5px solid;
+    padding: 1em;
+    color: #fff;
+    font: 16px/1 Arial;
+}
+
+.promo-text__title
 {
-    color: red;
-    background:url("../img/test.png");
+    font: 90px/1 BeyondSky;
+    margin: 0;
+    margin-bottom: 0.15em;
+}
+
+@font-face {
+    font-family: 'BeyondSky';
+    src: url("../font/beyond-sky.ttf");
 }
