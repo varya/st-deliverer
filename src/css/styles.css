@@ -14,6 +14,11 @@ a
     color: #f55;
 }
 
+.link_dark
+{
+    color: #2a3698;
+}
+
 .promo-text {
     margin: 2em auto;
     width: 500px;
@@ -39,4 +44,12 @@ a
 {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
+}
+
+.copyright
+{
+    text-align: center;
+    color: #2a3698;
+    margin: 1em auto 2em;
+    width: 500px;
 }
