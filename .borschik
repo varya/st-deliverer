@@ -1,8 +1,8 @@
 {
     "paths" : {
         "./": "/",
-        "src/img/": "http://telegraf.nl/static/img/",
-        "src/css/": "http://telegraf.nl/static/css/"
+        "src/img/": "http://varya.github.io/storage/pet-projects/st-deliverer/img/",
+        "src/css/": "http://varya.github.io/storage/pet-projects/st-deliverer/css/"
 
     }
 }
