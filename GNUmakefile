@@ -37,6 +37,6 @@ dist/img/%: src/img/%
 
 dist/%.html: src/%.html
 	@mkdir -p dist/html
-	./node_modules/borschik/bin/borschik --tech=html --input=$^ --output=$@
+	./node_modules/borschik/bin/borschik --input=$^ --output=$@
 
 .PHONY: all
