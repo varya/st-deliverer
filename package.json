@@ -1,17 +1,17 @@
 {
-    "name": "telegraafcollectief",
-    "description": "",
+    "name": "st-deliverer",
     "version": "0.0.1",
-    "homepage": "https://github.com/hyves-org/telegraafcollectief",
-    "author": "TMG",
+    "author": "",
     "repository": {
         "type": "git",
         "url": "git@github.com:hyves-org/telegraafcollectief.git"
     },
+    "engines": [
+        "node >= 0.6.0"
+    ],
     "dependencies": {
         "borschik": "0.4.2"
     },
-    "engines": [
-        "node >= 0.6.0"
-    ]
+    "devDependencies": {},
+    "private": true
 }
