@@ -1,42 +1,43 @@
+# list of files to be processed by borschik
 CSS_SRC_FILES:=$(wildcard src/*/*.css)
-CSS_DST_FILES:=$(subst src,dist,$(CSS_SRC_FILES))
-
-JS_SRC_FILES:=$(wildcard src/*/*.js)
-JS_DST_FILES:=$(subst src,dist,$(JS_SRC_FILES))
-
-FONTS_SRC_FILES:=$(wildcard src/*/*.ttf)
-FONTS_DST_FILES:=$(subst src,dist,$(FONTS_SRC_FILES))
-
-IMG_SRC_FILES:=$(wildcard src/img/*)
-IMG_DST_FILES:=$(subst src,dist,$(IMG_SRC_FILES))
-
 HTML_SRC_FILES:=$(wildcard src/*/*.html)
-HTML_DST_FILES:=$(subst src,dist,$(HTML_SRC_FILES))
 
-all: clean $(CSS_DST_FILES) $(JS_DST_FILES) $(IMG_DST_FILES) $(FONTS_DST_FILES) $(HTML_DST_FILES)
+BORSCHIK_SRC_FILES:=$(CSS_SRC_FILES) $(HTML_SRC_FILES)
+BORSCHIK_DST_FILES:=$(BORSCHIK_SRC_FILES:src/%=dist/%)
+# patsubst shortcut ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# http://www.gnu.org/software/make/manual/make.html#Text-Functions
 
+# list of files to be copied
+JS_SRC_FILES:=$(wildcard src/*/*.js)
+FONTS_SRC_FILES:=$(wildcard src/*/*.ttf)
+IMG_SRC_FILES:=$(wildcard src/img/*)
+
+COPY_SRC_FILES:=$(JS_SRC_FILES) $(FONTS_SRC_FILES) $(IMG_SRC_FILES)
+COPY_DST_FILES:=$(COPY_SRC_FILES:src/%=dist/%)
+
+# default target. Build all *_DST_FILES
+all: $(BORSCHIK_DST_FILES) $(COPY_DST_FILES)
+
+# release target. Clean up and build everything from scratch
+release: clean
+	$(MAKE) all
+
+# remove builded files
 clean:
-	rm -rf dist
-	mkdir dist
+	rm -rf dist/
 
-dist/%.css: src/%.css
-	@mkdir -p dist/css
-	./node_modules/borschik/bin/borschik --input=$^ --output=$@
+# create dist tree, called once for efficiency
+dist:
+	mkdir -p $(addprefix dist/,css js font img html)
 
-dist/%.js: src/%.js
-	@mkdir -p dist/js
-	cp $^ $@
+# following is static pattern rules
+# see http://www.gnu.org/software/make/manual/make.html#Static-Pattern
 
-dist/%.ttf: src/%.ttf
-	@mkdir -p dist/font
-	cp $^ $@
+# this is order-only prerequisite    vvvvvv see http://www.gnu.org/software/make/manual/make.html#Prerequisite-Types
+$(BORSCHIK_DST_FILES): dist/%: src/% | dist
+	./node_modules/borschik/bin/borschik --input=$< --output=$@
 
-dist/img/%: src/img/%
-	@mkdir -p dist/img
-	cp $^ $@
+$(COPY_DST_FILES): dist/%: src/% | dist
+	cp $< $@
 
-dist/%.html: src/%.html
-	@mkdir -p dist/html
-	./node_modules/borschik/bin/borschik --input=$^ --output=$@
-
-.PHONY: all
+.PHONY: all clean release
