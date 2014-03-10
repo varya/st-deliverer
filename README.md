@@ -5,3 +5,6 @@ javaScript, HTML) locally and transform all the relative paths into absolute if
 those static assets are hosted remotely.
 
 [Open an example page in your browser](http://varya.me/st-deliverer/dist/html/)
+
+[Full explanations in my
+blog](http://varya.me/en/issues/borschik-static-assets/)
